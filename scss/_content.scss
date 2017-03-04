@@ -1,0 +1,20 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Layout content
+@mixin siimple-layout-content
+{
+  //Style
+  display: inline-block; position: relative; z-index: $siimple-layout-content-zindex;
+
+  //Overflow
+  //overflow-y: auto; overflow-x: hidden;
+
+  //Transitions
+  //transition: all 0.3s;
+}
