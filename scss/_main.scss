@@ -1,0 +1,32 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Main content mixin
+@mixin siimple-layout-main
+{
+  //Display
+  display: block;
+
+  //Padding top
+  padding-top: $siimple-layout-main-padding-top;
+
+  //Padding bottom
+  padding-bottom: $siimple-layout-main-padding-bottom;
+
+  //Default is large style
+  @include siimple-layout-large;
+
+  //Small style
+  &--small { @include siimple-layout-small; }
+
+  //Large style
+  &--large { @include siimple-layout-large; }
+
+  //Fluid style
+  &--fluid { @include siimple-layout-fluid; }
+}
