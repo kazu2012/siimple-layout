@@ -1,0 +1,29 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Header component
+@mixin siimple-layout-header
+{
+  //Style
+  display: block; z-index: $siimple-layout-header-zindex;
+
+  //Width
+  width: calc(100% - #{$siimple-layout-header-offset + $siimple-layout-header-offset});
+
+  //Height
+  min-height: $siimple-layout-header-min-height;
+
+  //Position
+  //position: absolute; top: 0px; left: 0px;
+
+  //Margin
+  margin: { top: 0px; bottom: 0px; left: 0px; right: 0px; }
+
+  //Padding
+  padding: { top: 0px; bottom: 0px; left: $siimple-layout-header-offset; right: $siimple-layout-header-offset; }
+}
