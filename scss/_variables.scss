@@ -1,0 +1,188 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//
+//Layout sizes
+//
+
+//Fluid width
+$siimple-layout-fluid-width: 100%;
+
+//Fluid offset
+$siimple-layout-fluid-offset: 20px;
+
+//Large width
+$siimple-layout-large-width: 1180px;
+
+//Small width
+$siimple-layout-small-width: 960px;
+
+//
+//Content variables
+//
+
+//Default content z-index
+$siimple-layout-content-zindex: 1;
+
+//
+//Main variables
+//
+
+//Main padding top
+$siimple-layout-main-padding-top: 30px;
+
+//Main padding bottom
+$siimple-layout-main-padding-bottom: 30px;
+
+//
+//Footer variables
+//
+
+//Footer padding top
+$siimple-layout-footer-padding-top: 50px;
+
+//Footer padding bottom
+$siimple-layout-footer-padding-bottom: 80px;
+
+//
+//Title variables
+//
+
+//Title font size
+$siimple-layout-title-font-size: 22px;
+
+//Title default opacity
+$siimple-layout-title-opacity: 0.8;
+
+//
+//Header variables
+//
+
+//Default header z-index
+$siimple-layout-header-zindex: 3;
+
+//Default header height
+$siimple-layout-header-min-height: 60px !default;
+
+//Default header offset
+$siimple-layout-header-offset: 15px;
+
+//
+//Default sidebar variables
+//
+
+//Default sidebar width
+$siimple-layout-sidebar-width: 240px !default;
+
+//Default sidebar z-index
+$siimple-layout-sidebar-zindex: 5;
+
+//Default sidebar title padding left
+$siimple-layout-sidebar-title-padding-left: 20px;
+
+//
+//Sidebar button variables
+//
+
+//Sidebar button zindex
+$siimple-layout-sidebar-button-zindex: 4;
+
+//Sidebar button width
+$siimple-layout-sidebar-button-width: 40px;
+
+//Sidebar button height
+$siimple-layout-sidebar-button-height: 40px;
+
+//Sidebar button margin top
+$siimple-layout-sidebar-button-margin-top: ($siimple-layout-header-min-height - $siimple-layout-sidebar-button-height) / 2;
+
+//Sidebar button margin bottom
+$siimple-layout-sidebar-button-margin-bottom: ($siimple-layout-header-min-height - $siimple-layout-sidebar-button-height) / 2;
+
+//Sidebar button margin left
+$siimple-layout-sidebar-button-margin-left: 10px;
+
+//Sidebar button margin right
+$siimple-layout-sidebar-button-margin-right: 10px;
+
+//Sidebar button header offset
+$siimple-layout-sidebar-button-header-offset: $siimple-layout-sidebar-button-width + $siimple-layout-sidebar-button-margin-left + $siimple-layout-sidebar-button-margin-right;
+
+//
+//Menu sidebar variables
+//
+
+//Menu sidebar margin top
+$siimple-layout-menu-sidebar-margin-top: 5px;
+
+//Menu sidebar margin bottom
+$siimple-layout-menu-sidebar-margin-bottom: 5px;
+
+//
+//Menu link variables
+//
+
+//Menu link padding
+$siimple-layout-menu-link-padding: 10px;
+
+//Menu link border radius
+$siimple-layout-menu-link-radius: 5px;
+
+//Menu link height
+$siimple-layout-menu-link-height: 34px;
+
+//Menu link line height
+$siimple-layout-menu-link-line-height: 34px;
+
+//Menu link font size
+$siimple-layout-menu-link-font-size: 14px;
+
+//Menu link padding left
+$siimple-layout-menu-link-padding-left: 10px;
+
+//Menu link padding right
+$siimple-layout-menu-link-padding-right: 10px;
+
+//
+//Menu link header variables
+//
+
+//Menu link header margin left
+$siimple-layout-menu-link-header-margin-left: 5px;
+
+//Menu link header margin right
+$siimple-layout-menu-link-header-margin-right: 5px;
+
+//Menu link header margin top
+$siimple-layout-menu-link-header-margin-top: ($siimple-layout-header-min-height - $siimple-layout-menu-link-height) / 2;
+
+//
+//Menu link sidebar variables
+//
+
+//Menu sidebar link margin top
+$siimple-layout-menu-link-sidebar-margin-top: 8px;
+
+//Menu sidebar link margin bottom
+$siimple-layout-menu-link-sidebar-margin-bottom: 8px;
+
+//Menu sidebar link margin left
+$siimple-layout-menu-link-sidebar-margin-left: 10px;
+
+//Menu sidebar link margin right
+$siimple-layout-menu-link-sidebar-margin-right: 10px;
+
+//
+//Jumbotron variables
+//
+
+//Jumbotron padding top
+$siimple-layout-jumbotron-padding-top: 120px;
+
+//Jumbotron padding bottom
+$siimple-layout-jumbotron-padding-bottom: 120px;
