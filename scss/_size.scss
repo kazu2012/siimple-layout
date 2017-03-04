@@ -1,0 +1,60 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Fluid size mixin
+@mixin siimple-layout-fluid
+{
+  //Width
+  width: calc(100% - #{$siimple-layout-fluid-offset + $siimple-layout-fluid-offset}) !important;
+
+  //Padding left
+  padding-left: $siimple-layout-fluid-offset !important;
+
+  //Padding right
+  padding-right: $siimple-layout-fluid-offset !important;
+}
+
+//Small size mixin
+@mixin siimple-layout-small
+{
+  //Width
+  width: $siimple-layout-small-width;
+
+  //Padding left
+  padding-left: calc(50% - #{$siimple-layout-small-width / 2});
+
+  //Padding rigth
+  padding-right: calc(50% - #{$siimple-layout-small-width / 2});
+
+  //Media
+  @media screen and (max-width: $siimple-layout-small-width)
+  {
+    //Include the fluid mixin
+    @include siimple-layout-fluid;
+  }
+}
+
+//Large size mixin
+@mixin siimple-layout-large
+{
+  //Width
+  width: $siimple-layout-large-width;
+
+  //Padding left
+  padding-left: calc(50% - #{$siimple-layout-large-width / 2});
+
+  //Padding rigth
+  padding-right: calc(50% - #{$siimple-layout-large-width / 2});
+
+  //Media
+  @media screen and (max-width: $siimple-layout-large-width)
+  {
+    //Include the fluid mixin
+    @include siimple-layout-fluid;
+  }
+}
