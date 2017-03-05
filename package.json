@@ -1,0 +1,25 @@
+{
+  "name": "siimple-layout",
+  "version": "0.0.1",
+  "description": "The layout module for siimple",
+  "author": "Josemi Juanes <josemijuanes@gmail.com>",
+  "license": "MIT",
+  "homepage": "http://siimple.juanes.xyz/layout",
+  "repository": { "type": "git", "url": "https://github.com/siimple/siimple-layout.git" },
+  "keywords": [ "siimple", "layout", "ui", "design", "flat", "scss", "sass" ],
+  "dependencies":
+  {
+    "siimple": "2.0.1",
+    "siimple-colors": "0.1.0"
+  },
+  "devDependencies":
+  {
+    "gulp": "3.9.1",
+    "gulp-header": "^1.8.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-clean-css": "3.0.2",
+    "gulp-autoprefixer": "^3.1.1",
+    "del": "2.2.2"
+  }
+}
