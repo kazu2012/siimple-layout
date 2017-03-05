@@ -1,0 +1,187 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Import siimple
+@import "siimple/scss/_mixins.scss";
+
+//Import siimple colors
+@import "siimple-colors/scss/_mixins.scss";
+
+//Import all mixins
+@import "./_mixins.scss";
+
+//Layout class
+.siimple-layout
+{
+  //Default layout style
+  width: 100%; height: 100%;
+
+  //Font
+  @include siimple-font; color: $siimple-navy; font-size: 16px; font-weight: normal;
+
+  //Overflow
+  overflow-x: hidden;
+
+  //Position
+  position: relative;
+
+  //Flex display
+  display: flex; flex-direction: column;
+
+  //Background color
+  background-color: $siimple-white;
+
+  //Content
+  &-content { @include siimple-layout-content; }
+
+  //Title
+  &-title { @include siimple-layout-title; }
+
+  //Menu
+  &-menu { @include siimple-layout-menu; }
+
+  //Jumbotron
+  &-jumbotron{ @include siimple-layout-jumbotron; }
+
+  //Main content
+  &-main { @include siimple-layout-main; }
+
+  //Footer
+  &-footer { @include siimple-layout-footer; }
+
+  //Form
+  //&-form { @include siimple-layout-form; }
+
+  //Header
+  &-header { @include siimple-layout-header; }
+
+  //Header title
+  &-header &-title { float: left; }
+
+  //Meader menu
+  &-header &-menu { float: right; display: inline-block; }
+
+  //Header menu link
+  &-header &-menu-link
+  {
+    //Display
+    display: inline-block; float: left;
+
+    //Margin left
+    margin-left: $siimple-layout-menu-link-header-margin-left;
+
+    //Margin right
+    margin-right: $siimple-layout-menu-link-header-margin-right;
+
+    //Margin top
+    margin-top: $siimple-layout-menu-link-header-margin-top;
+  }
+
+  //Sidebar
+  &-sidebar { @include siimple-layout-sidebar; }
+
+  //Sidebar title
+  &-sidebar &-title { padding-left: $siimple-layout-sidebar-title-padding-left; }
+
+  //Sidebar menu
+  &-sidebar &-menu { margin-top: $siimple-layout-menu-sidebar-margin-top; margin-bottom: $siimple-layout-menu-sidebar-margin-bottom; }
+
+  //Sidebar menu link
+  &-sidebar &-menu-link
+  {
+    //Display
+    display: block;
+
+    //Margin left
+    margin-left: $siimple-layout-menu-link-sidebar-margin-left;
+
+    //Margin right
+    margin-right: $siimple-layout-menu-link-sidebar-margin-right;
+
+    //Margin top
+    margin-top: $siimple-layout-menu-link-sidebar-margin-top;
+
+    //Margin bottom
+    margin-bottom: $siimple-layout-menu-link-sidebar-margin-bottom;
+  }
+
+  //Colored layouts
+  @each $color,$list in $siimple-palette
+  {
+    //Header
+    &--#{$color} &-header { background-color: siimple-color-base($color); color: siimple-color-over($color); }
+
+    //Geader title color
+    &--#{$color} &-header &-title { color: siimple-color-over($color); }
+
+    //Header menu link color
+    &--#{$color} &-header &-menu-link { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
+
+    //Header menu link color hover
+    &--#{$color} &-header &-menu-link:hover { background-color: siimple-color-index($color, 3); }
+
+    //Sidebar
+    &--#{$color} &-sidebar { background-color: siimple-color-base($color); color: siimple-color-over($color); }
+
+    //Blue sidebar title background
+    &--#{$color} &-sidebar &-title { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
+
+    //Blue sidebar menu link color
+    &--#{$color} &-sidebar &-menu-link { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
+
+    //Blue sidebar menu link color hover
+    &--#{$color} &-sidebar &-menu-link:hover { background-color: siimple-color-index($color, 3); }
+  }
+
+  //Has sidebar
+  //&--has-sidebar &-content { margin-left: $siimple-layout-sidebar-width; }
+
+  //Has sidebar and is visible
+  &--has-sidebar &-sidebar.is-visible { transform: translateX(0); }
+
+  //Has sidebar and is visible
+  &--has-sidebar &-sidebar.is-visible ~ &-content { overflow: hidden; }
+
+  //Has sidebar and is visible
+  &--has-sidebar &-sidebar.is-visible ~ &-sidebar-obfuscator { background-color: rgba(0, 0, 0, 0.4); visibility: visible; }
+
+  //Has sidebar fixed set the content margin left
+  &--has-sidebar-fixed &-content { margin-left: $siimple-layout-sidebar-width; }
+
+  //Has sidebar fixed display the sidebar
+  &--has-sidebar-fixed &-sidebar { transition: transform 0s !important; transform: translateX(0) !important; }
+
+  //Has sidebar fixed hide the obfuscator
+  &--has-sidebar-fixed &-sidebar-obfuscator { visibility: hidden !important; }
+
+  //Has sidebar button
+  &--has-sidebar-button &-header
+  {
+    //Update the header width
+    width: calc(100% - #{$siimple-layout-sidebar-button-header-offset + $siimple-layout-header-offset});
+
+    //Update the header padding left
+    padding-left: $siimple-layout-sidebar-button-header-offset;
+  }
+
+  //Has header fixed
+  &--has-header-fixed
+  {
+    //Update the layout margin top
+    margin-top: $siimple-layout-header-min-height !important;
+
+    //Update the height
+    height: calc(100% - #{$siimple-layout-header-min-height});
+  }
+
+  //Has header fixed
+  &--has-header-fixed &-header { position: fixed; top: 0px; left: 0px; }
+
+  //Has header fixed update the sidebar button position
+  &--has-header-fixed &-sidebar-button { position: fixed; } 
+}
