@@ -5,5 +5,10 @@
   "homepage": "https://siimple.juanes.xyz/layout",
   "repository": { "type": "git", "url": "https://github.com/siimple/siimple-layout.git" },
   "license": "MIT",
-  "keywords": [ "siimple", "layout", "ui", "design", "flat" ]
+  "keywords": [ "siimple", "layout", "ui", "design", "flat" ],
+  "dependencies":
+  {
+    "siimple": "2.0.1",
+    "siimple-colors": "0.1.0"
+  }
 }
