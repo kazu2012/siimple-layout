@@ -2,6 +2,7 @@
 var autoprefixer = require('gulp-autoprefixer');
 var fs = require('fs');
 var gulp = require('gulp');
+var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
@@ -51,6 +52,19 @@ gulp.task('build:scss', function()
   .pipe(gulp.dest('./dist/'));
 });
 
+//Build the javascript files
+gulp.task('build:js', function()
+{
+  //Select all the js files
+  gulp.src([ 'js/siimple-layout.js', 'js/**.js' ])
+
+  //Concatenate all js files
+  .pipe(concat('siimple-layout.js'))
+
+  //Save to the dist folder
+  .pipe(gulp.dest('./dist/'));
+});
+
 //Minimize the css
 gulp.task('minimize', function()
 {
@@ -71,7 +85,7 @@ gulp.task('minimize', function()
 });
 
 //Build task
-gulp.task('build', [ 'build:scss' ]);
+gulp.task('build', [ 'build:scss', 'build:js' ]);
 
 //Execute the tasks
 gulp.task('default', [ 'clean', 'build', 'minimize' ]);
