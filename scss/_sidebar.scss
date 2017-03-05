@@ -1,0 +1,70 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Sidebar component
+@mixin siimple-layout-sidebar
+{
+  //Size
+  width: $siimple-layout-sidebar-width; height: 100%; z-index: $siimple-layout-sidebar-zindex;
+
+  //Flex style
+  display: flex; flex-direction: column; flex-wrap: nowrap;
+
+  //Position
+  position: absolute; top: 0px; left: 0px;
+
+  //Transform
+  transform: translateX(- $siimple-layout-sidebar-width);
+
+  //Transition
+  transition: transform 0.3s;
+
+  //Sidebar menu icon
+  &-button
+  {
+    //Display
+    display: block; z-index: $siimple-layout-sidebar-button-zindex;
+
+    //Size
+    width: $siimple-layout-sidebar-button-width; height: $siimple-layout-sidebar-button-height;
+
+    //Margin top
+    margin-top: $siimple-layout-sidebar-button-margin-top;
+
+    //Margin buttom
+    margin-bottom: $siimple-layout-sidebar-button-margin-bottom;
+
+    //Margin left
+    margin-left: $siimple-layout-sidebar-button-margin-left;
+
+    //Margin right
+    margin-right: $siimple-layout-sidebar-button-margin-right;
+
+    //Position
+    position: absolute; top: 0px; left: 0px;
+  }
+
+  //Sidebar obfuscator
+  &-obfuscator
+  {
+    //Default position
+    position: absolute; top: 0; left: 0;
+
+    //Size
+    height: 100%; width: 100%;
+
+    //z-index
+    z-index: $siimple-layout-sidebar-obfuscator-zindex;
+
+    //Visibility
+    visibility: hidden;
+
+    //Transition
+    transition: all 0.3s;
+  }
+}
