@@ -47,6 +47,40 @@
 
     //Position
     position: absolute; top: 0px; left: 0px;
+
+    //Cursor
+    cursor: pointer;
+
+    //Hamburguer
+    & span, & span::after, & span::before
+    {
+      //Display
+      display: inline-block;
+
+      //Background color
+      //background-color: $siimple-layout-sidebar-hamburguer-background;
+
+      //Border radius
+      border-radius: $siimple-layout-sidebar-hamburguer-radius;
+
+      //Size
+      width: $siimple-layout-sidebar-hamburguer-width; height: $siimple-layout-sidebar-hamburguer-height;
+
+      //Margin
+      //margin: { left: $siimple-layout-sidebar-hamburguer-margin; right: $siimple-layout-sidebar-hamburguer-margin; }
+
+      //Position
+      position: absolute;
+    }
+
+    //Hamburguer span
+    & span { top: $siimple-layout-sidebar-hamburguer-top; left: $siimple-layout-sidebar-hamburguer-left; }
+
+    //Hamburguer span before
+    & span::before { content: ''; top: -10px; }
+
+    //Hamburguer span after
+    & span::after { content: ''; top: 10px; }
   }
 
   //Sidebar obfuscator
