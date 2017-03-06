@@ -114,6 +114,28 @@ $siimple-layout-sidebar-button-margin-right: 10px;
 $siimple-layout-sidebar-button-header-offset: $siimple-layout-sidebar-button-width + $siimple-layout-sidebar-button-margin-left + $siimple-layout-sidebar-button-margin-right;
 
 //
+//Sidebar button hamburger
+//
+
+//Sidebar button hamburguer background
+$siimple-layout-sidebar-hamburguer-background: #ffffff;
+
+//Sidebar button hamburger width
+$siimple-layout-sidebar-hamburguer-width: 32px;
+
+//Sidebar button hamburguer height
+$siimple-layout-sidebar-hamburguer-height: 5px;
+
+//Sidebar button hamburguer border radius
+$siimple-layout-sidebar-hamburguer-radius: 10px;
+
+//Sidebar button hamburguer left position
+$siimple-layout-sidebar-hamburguer-left: 4px;
+
+//Sidebar button hamburguer top position
+$siimple-layout-sidebar-hamburguer-top: ($siimple-layout-sidebar-button-width - $siimple-layout-sidebar-hamburguer-height) / 2;
+
+//
 //Sidebar obfuscator variables
 //
 
