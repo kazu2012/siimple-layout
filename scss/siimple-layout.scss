@@ -129,10 +129,10 @@
     &--#{$color} &-sidebar { background-color: siimple-color-base($color); color: siimple-color-over($color); }
 
     //Sidebar title background
-    &--#{$color} &-sidebar &-title { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
+    &--#{$color} &-sidebar &-title { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
 
     //Sidebar menu link color
-    &--#{$color} &-sidebar &-menu-link { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
+    &--#{$color} &-sidebar &-menu-link { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
 
     //Sidebar menu link color hover
     &--#{$color} &-sidebar &-menu-link:hover { background-color: siimple-color-index($color, 3); }
