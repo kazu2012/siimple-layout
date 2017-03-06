@@ -120,7 +120,7 @@
     &--#{$color} &-header &-title { color: siimple-color-over($color); }
 
     //Header menu link color
-    &--#{$color} &-header &-menu-link { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
+    &--#{$color} &-header &-menu-link { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
 
     //Header menu link color hover
     &--#{$color} &-header &-menu-link:hover { background-color: siimple-color-index($color, 3); }
@@ -128,14 +128,23 @@
     //Sidebar
     &--#{$color} &-sidebar { background-color: siimple-color-base($color); color: siimple-color-over($color); }
 
-    //Blue sidebar title background
+    //Sidebar title background
     &--#{$color} &-sidebar &-title { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
 
-    //Blue sidebar menu link color
+    //Sidebar menu link color
     &--#{$color} &-sidebar &-menu-link { background-color: siimple-color-index($color, 1); color: siimple-color-over($color); }
 
-    //Blue sidebar menu link color hover
+    //Sidebar menu link color hover
     &--#{$color} &-sidebar &-menu-link:hover { background-color: siimple-color-index($color, 3); }
+
+    //Sidebar button hamburguer background color
+    &--#{$color} &-sidebar-button span { background-color: siimple-color-over($color); }
+
+    //Sidebar button hamburguer background color
+    &--#{$color} &-sidebar-button span::before { background-color: siimple-color-over($color); }
+
+    //Sidebar button hamburguer background color
+    &--#{$color} &-sidebar-button span::after { background-color: siimple-color-over($color); }
   }
 
   //Has sidebar
@@ -183,5 +192,5 @@
   &--has-header-fixed &-header { position: fixed; top: 0px; left: 0px; }
 
   //Has header fixed update the sidebar button position
-  &--has-header-fixed &-sidebar-button { position: fixed; } 
+  &--has-header-fixed &-sidebar-button { position: fixed; }
 }
