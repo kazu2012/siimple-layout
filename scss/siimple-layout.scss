@@ -66,20 +66,20 @@
   //Meader menu
   &-header &-menu { float: right; display: inline-block; }
 
-  //Header menu link
-  &-header &-menu-link
+  //Header menu item
+  &-header &-menu-item
   {
     //Display
     display: inline-block; float: left;
 
     //Margin left
-    margin-left: $siimple-layout-menu-link-header-margin-left;
+    margin-left: $siimple-layout-menu-item-header-margin-left;
 
     //Margin right
-    margin-right: $siimple-layout-menu-link-header-margin-right;
+    margin-right: $siimple-layout-menu-item-header-margin-right;
 
     //Margin top
-    margin-top: $siimple-layout-menu-link-header-margin-top;
+    margin-top: $siimple-layout-menu-item-header-margin-top;
   }
 
   //Sidebar
@@ -91,23 +91,23 @@
   //Sidebar menu
   &-sidebar &-menu { margin-top: $siimple-layout-menu-sidebar-margin-top; margin-bottom: $siimple-layout-menu-sidebar-margin-bottom; }
 
-  //Sidebar menu link
-  &-sidebar &-menu-link
+  //Sidebar menu item
+  &-sidebar &-menu-item
   {
     //Display
     display: block;
 
     //Margin left
-    margin-left: $siimple-layout-menu-link-sidebar-margin-left;
+    margin-left: $siimple-layout-menu-item-sidebar-margin-left;
 
     //Margin right
-    margin-right: $siimple-layout-menu-link-sidebar-margin-right;
+    margin-right: $siimple-layout-menu-item-sidebar-margin-right;
 
     //Margin top
-    margin-top: $siimple-layout-menu-link-sidebar-margin-top;
+    margin-top: $siimple-layout-menu-item-sidebar-margin-top;
 
     //Margin bottom
-    margin-bottom: $siimple-layout-menu-link-sidebar-margin-bottom;
+    margin-bottom: $siimple-layout-menu-item-sidebar-margin-bottom;
   }
 
   //Colored layouts
@@ -120,10 +120,10 @@
     &--#{$color} &-header &-title { color: siimple-color-over($color); }
 
     //Header menu link color
-    &--#{$color} &-header &-menu-link { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
+    &--#{$color} &-header &-menu-item { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
 
     //Header menu link color hover
-    &--#{$color} &-header &-menu-link:hover { background-color: siimple-color-index($color, 3); }
+    &--#{$color} &-header &-menu-item:hover { background-color: siimple-color-index($color, 3); }
 
     //Sidebar
     &--#{$color} &-sidebar { background-color: siimple-color-base($color); color: siimple-color-over($color); }
@@ -132,10 +132,10 @@
     &--#{$color} &-sidebar &-title { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
 
     //Sidebar menu link color
-    &--#{$color} &-sidebar &-menu-link { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
+    &--#{$color} &-sidebar &-menu-item { background-color: siimple-color-index($color, 0); color: siimple-color-over($color); }
 
     //Sidebar menu link color hover
-    &--#{$color} &-sidebar &-menu-link:hover { background-color: siimple-color-index($color, 3); }
+    &--#{$color} &-sidebar &-menu-item:hover { background-color: siimple-color-index($color, 3); }
 
     //Sidebar button hamburguer background color
     &--#{$color} &-sidebar-button span { background-color: siimple-color-over($color); }
