@@ -153,45 +153,55 @@ $siimple-layout-menu-sidebar-margin-top: 5px;
 $siimple-layout-menu-sidebar-margin-bottom: 5px;
 
 //
-//Menu link variables
+//Menu item variables
 //
 
-//Menu link padding
+//Menu item padding
 $siimple-layout-menu-item-padding: 10px;
 
-//Menu link border radius
+//Menu item border radius
 $siimple-layout-menu-item-radius: 5px;
 
-//Menu link height
+//Menu item height
 $siimple-layout-menu-item-height: 34px;
 
-//Menu link line height
+//Menu item line height
 $siimple-layout-menu-item-line-height: 34px;
 
-//Menu link font size
+//Menu item font size
 $siimple-layout-menu-item-font-size: 14px;
 
-//Menu link padding left
+//Menu item padding left
 $siimple-layout-menu-item-padding-left: 10px;
 
-//Menu link padding right
+//Menu item padding right
 $siimple-layout-menu-item-padding-right: 10px;
 
 //
-//Menu link header variables
+//Menu content variables
 //
 
-//Menu link header margin left
+//Menu content margin bottom
+$siimple-layout-menu-content-margin-bottom: 15px;
+
+//Menu content border radius
+$siimple-layout-menu-content-radius: 5px;
+
+//
+//Menu item header variables
+//
+
+//Menu item header margin left
 $siimple-layout-menu-item-header-margin-left: 5px;
 
-//Menu link header margin right
+//Menu item header margin right
 $siimple-layout-menu-item-header-margin-right: 5px;
 
-//Menu link header margin top
+//Menu item header margin top
 $siimple-layout-menu-item-header-margin-top: ($siimple-layout-header-min-height - $siimple-layout-menu-item-height) / 2;
 
 //
-//Menu link sidebar variables
+//Menu item sidebar variables
 //
 
 //Menu sidebar link margin top
