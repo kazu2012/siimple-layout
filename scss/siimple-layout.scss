@@ -36,9 +36,6 @@
   //Background color
   background-color: $siimple-white;
 
-  //Content
-  &-content { @include siimple-layout-content; }
-
   //Title
   &-title { @include siimple-layout-title; }
 
@@ -56,6 +53,50 @@
 
   //Form
   //&-form { @include siimple-layout-form; }
+
+  //Content
+  &-content { @include siimple-layout-content; }
+
+  //Content menu
+  &-content &-menu
+  {
+    //Display
+    display: block;
+
+    //Size
+    width: 100%;
+
+    //Border
+    border-radius: $siimple-layout-menu-content-radius;
+
+    //Background
+    background-color: $siimple-grey-2;
+
+    //Margin
+    margin: { bottom: $siimple-layout-menu-content-margin-bottom; }
+  }
+
+  //Content menu item
+  &-content &-menu-item
+  {
+    //Display
+    display: block;
+
+    //Border
+    border-radius: 0px;
+
+    //Hover
+    &:hover { background-color: $siimple-grey-1; }
+
+    //Menu item selected
+    &--selected { background-color: $siimple-grey-0 !important; }
+
+    //First item element
+    &:first-child { border-top-left-radius: $siimple-layout-menu-item-radius; border-top-right-radius: $siimple-layout-menu-item-radius; }
+
+    //Last child element
+    &:last-child { border-bottom-left-radius: $siimple-layout-menu-item-radius; border-bottom-right-radius: $siimple-layout-menu-item-radius; }
+  }
 
   //Header
   &-header { @include siimple-layout-header; }
