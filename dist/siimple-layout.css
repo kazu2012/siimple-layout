@@ -323,7 +323,8 @@
     margin-bottom: 15px; }
   .siimple-layout-content .siimple-layout-menu-item {
     display: block;
-    border-radius: 0px; }
+    border-radius: 0px;
+    color: #57607c; }
     .siimple-layout-content .siimple-layout-menu-item:hover {
       background-color: #d7e4f4; }
     .siimple-layout-content .siimple-layout-menu-item--selected {
