@@ -16,6 +16,7 @@ $siimple-layout-main-menu-margin-bottom: 15px;
 $siimple-layout-main-menu-radius: 5px;
 
 //Main menu item variables
+$siimple-layout-main-menu-item-height: 40px;
 $siimple-layout-main-menu-item-padding-left: 10px;
 
 //Main menu subitem variables
@@ -62,11 +63,16 @@ $siimple-layout-main-menu-subitem-padding-left: 25px;
   &-main &-menu &-menu-item, &-main &-menu &-menu-subitem
   {
     display: block;
+
+    height: $siimple-layout-main-menu-item-height;
+    line-height: $siimple-layout-main-menu-item-height;
+
     border-radius: 0px;
 
     //Menu item hover
     &:hover
     {
+      cursor: pointer;
       background-color: $siimple-grey-1;
     }
 
