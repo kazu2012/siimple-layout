@@ -6,27 +6,30 @@
 // Website:    https://siimple.juanes.xyz
 //
 
+//Main variables
+$siimple-layout-main-padding-top: 30px;
+$siimple-layout-main-padding-bottom: 30px;
+
 //Main content mixin
 @mixin siimple-layout-main
 {
-  //Display
-  display: block;
+  //Main class
+  &-main
+  {
+    display: block;
 
-  //Padding top
-  padding-top: $siimple-layout-main-padding-top;
+    padding-top: $siimple-layout-main-padding-top;
+    padding-bottom: $siimple-layout-main-padding-bottom;
 
-  //Padding bottom
-  padding-bottom: $siimple-layout-main-padding-bottom;
+    @include siimple-layout-large;
+  }
 
-  //Default is large style
-  @include siimple-layout-large;
+  //Small main
+  &-main &-main--small { @include siimple-layout-small; }
 
-  //Small style
-  &--small { @include siimple-layout-small; }
+  //Large main
+  &-main &-main--large { @include siimple-layout-large; }
 
-  //Large style
-  &--large { @include siimple-layout-large; }
-
-  //Fluid style
-  &--fluid { @include siimple-layout-fluid; }
+  //Fluid main
+  &-main &-main--fluid { @include siimple-layout-fluid; }
 }
