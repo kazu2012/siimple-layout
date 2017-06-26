@@ -25,6 +25,9 @@ $siimple-layout-sidebar-menu-item-height: 40px;
 $siimple-layout-sidebar-menu-item-padding: 10px;
 $siimple-layout-sidebar-menu-item-size: 14px;
 
+//Sidebar obfuscator variables
+$siimple-layout-sidebar-obfuscator-zindex: 4;
+
 //Sidebar component
 @mixin siimple-layout-sidebar
 {
