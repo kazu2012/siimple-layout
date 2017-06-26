@@ -78,25 +78,25 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
   @each $color,$list in $siimple-palette
   {
     //Add the background color
-    &-jumbotron &-jumbotron--#{$color}
+    &-jumbotron--#{$color}
     {
       background-color: siimple-color-base($color);
     }
 
     //Jumbotron title
-    &-jumbotron &-jumbotron--#{$color} &-title
+    &-jumbotron--#{$color} &-title
     {
       color: siimple-color-over($color);
     }
 
     //Jumbotron subtitle color
-    &-jumbotron &-jumbotron--#{$color} &-subtitle
+    &-jumbotron--#{$color} &-subtitle
     {
       color: siimple-color-over($color);
     }
 
     //Jumbotron detail color
-    &-jumbotron &-jumbotron--#{$color} &-detail
+    &-jumbotron--#{$color} &-detail
     {
       color: siimple-color-over($color);
     }
