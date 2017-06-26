@@ -10,6 +10,17 @@
 $siimple-layout-main-padding-top: 30px;
 $siimple-layout-main-padding-bottom: 30px;
 
+//Main menu variables
+$siimple-layout-main-menu-margin-top: 0px;
+$siimple-layout-main-menu-margin-bottom: 15px;
+$siimple-layout-main-menu-radius: 5px;
+
+//Main menu item variables
+$siimple-layout-main-menu-item-padding-left: 10px;
+
+//Main menu subitem variables
+$siimple-layout-main-menu-subitem-padding-left: 25px;
+
 //Main content mixin
 @mixin siimple-layout-main
 {
@@ -32,4 +43,59 @@ $siimple-layout-main-padding-bottom: 30px;
 
   //Fluid main
   &-main &-main--fluid { @include siimple-layout-fluid; }
+
+  //Main menu
+  &-main &-menu
+  {
+    display: block;
+    width: 100%;
+
+    border-radius: $siimple-layout-main-menu-radius;
+
+    background-color: $siimple-grey-2;
+
+    margin-top: $siimple-layout-main-menu-margin-top;
+    margin-bottom: $siimple-layout-main-menu-margin-bottom;
+  }
+
+  //Main menu item and subitem
+  &-main &-menu &-menu-item, &-main &-menu &-menu-subitem
+  {
+    display: block;
+    border-radius: 0px;
+
+    //Menu item hover
+    &:hover
+    {
+      background-color: $siimple-grey-1;
+    }
+
+    //Menu item first item element
+    &:first-child
+    {
+      border-top-left-radius: $siimple-layout-main-menu-radius;
+      border-top-right-radius: $siimple-layout-main-menu-radius;
+    }
+
+    //Menu item last child element
+    &:last-child
+    {
+      border-bottom-left-radius: $siimple-layout-main-menu-radius;
+      border-bottom-right-radius: $siimple-layout-main-menu-radius;
+    }
+  }
+
+  //Main menu item
+  &-main &-menu-item
+  {
+    color: $siimple-navy;
+    padding-left: $siimple-layout-main-menu-item-padding-left !important;
+  }
+
+  //Main menu subitem
+  &-main &-menu-subitem
+  {
+    color: $siimple-navy-3;
+    padding-left: $siimple-layout-main-menu-subitem-padding-left !important;
+  }
 }
