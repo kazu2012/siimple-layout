@@ -92,32 +92,32 @@ $siimple-layout-topbar-title-size: 22px;
   @each $color,$list in $siimple-palette
   {
     //Topbar background and text color
-    &-topbar--#{$color} &-topbar
+    &-topbar--#{$color}
     {
       background-color: siimple-color-index($color, 2);
       color: siimple-color-over($color);
     }
 
     //Topbar menu item
-    &-topbar--#{$color} &-topbar-menu-item
+    &-topbar--#{$color} &-menu-item
     {
       color: siimple-color-over($color);
     }
 
     //Topbar menu item hover
-    &-topbar--#{$color} &-topbar-menu-item:hover
+    &-topbar--#{$color} &-menu-item:hover
     {
       background-color: siimple-color-index($color, 3);
     }
 
     //Topbar title
-    &-topbar--#{$color} &-topbar-title
+    &-topbar--#{$color} &-title
     {
       color: siimple-color-over($color);
     }
 
     //Topbar title hover
-    &-topbar--#{$color} &-topbar-title:hover
+    &-topbar--#{$color} &-title:hover
     {
       background-color: siimple-color-index($color, 3);
     }
