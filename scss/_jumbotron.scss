@@ -80,7 +80,7 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
     //Add the background color
     &-jumbotron--#{$color}
     {
-      background-color: siimple-color-base($color);
+      background-color: siimple-color-index($color, 3);
     }
 
     //Jumbotron title
