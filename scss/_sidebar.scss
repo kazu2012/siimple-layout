@@ -119,6 +119,8 @@ $siimple-layout-sidebar-obfuscator-zindex: 4;
     width: 100%;
     height: 100%;
 
+    background-color: rgba(0, 0, 0, 0.4);
+
     z-index: $siimple-layout-sidebar-obfuscator-zindex;
     transition: all 0.3s;
   }
