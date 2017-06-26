@@ -73,6 +73,9 @@ $siimple-layout-main-menu-subitem-padding-left: 25px;
 
     border-radius: 0px;
 
+    transition: all 0.3s;
+    opacity: 1.0;
+
     //Menu item hover
     &:hover
     {
