@@ -6,37 +6,41 @@
 // Website:    https://siimple.juanes.xyz
 //
 
+//Footer variables
+$siimple-layout-footer-padding-top: 50px;
+$siimple-layout-footer-padding-bottom: 80px;
+
 //Footer mixin
 @mixin siimple-layout-footer
 {
-  //Display
-  display: block;
+  //Footer class
+  &-footer
+  {
+    display: block;
 
-  //Padding top
-  padding-top: $siimple-layout-footer-padding-top;
+    padding-top: $siimple-layout-footer-padding-top;
+    padding-bottom: $siimple-layout-footer-padding-bottom;
 
-  //Padding bottom
-  padding-bottom: $siimple-layout-footer-padding-bottom;
+    @include siimple-layout-large;
+  }
 
-  //Default is large style
-  @include siimple-layout-large;
+  //Small footer
+  &-footer &-footer--small { @include siimple-layout-small; }
 
-  //Small style
-  &--small { @include siimple-layout-small; }
+  //Large footer
+  &-footer &-footer--large { @include siimple-layout-large; }
 
-  //Large style
-  &--large { @include siimple-layout-large; }
+  //Fluid footer
+  &-footer &-footer--fluid { @include siimple-layout-fluid; }
 
-  //Fluid style
-  &--fluid { @include siimple-layout-fluid; }
-
-  //Foot colors
+  //Footer colors
   @each $color,$list in $siimple-palette
   {
-    //Set the background color
-    &--#{$color} { background-color: siimple-color-base($color); }
-
-    //Set the text color
-    &--#{$color} { color: siimple-color-over($color); }
+    //Footer color
+    &-footer &-footer--#{$color}
+    {
+      background-color: siimple-color-base($color);
+      color: siimple-color-over($color);
+    }
   }
 }
