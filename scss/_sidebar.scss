@@ -6,24 +6,147 @@
 // Website:    https://siimple.juanes.xyz
 //
 
+//Sidebar variables
+$siimple-layout-sidebar-width: 240px;
+$siimple-layout-sidebar-zindex: 5;
+
+//Sidebar menu variables
+$siimple-layout-sidebar-menu-margin-top: 5px;
+$siimple-layout-sidebar-menu-margin-bottom: 5px;
+
+//Sidebar menu title variables
+$siimple-layout-sidebar-menu-title-height: 25px;
+$siimple-layout-sidebar-menu-title-size: 16px;
+$siimple-layout-sidebar-menu-title-padding: 10px;
+$siimple-layout-sidebar-menu-title-opacity: 0.6;
+
+//Sidebar menu item variables
+$siimple-layout-sidebar-menu-item-height: 40px;
+$siimple-layout-sidebar-menu-item-padding: 10px;
+
+//Sidebar obfuscator variables
+$siimple-layout-sidebar-obfuscator-zindex: 4;
+
 //Sidebar component
 @mixin siimple-layout-sidebar
 {
-  //Size
-  width: $siimple-layout-sidebar-width; height: 100%; z-index: $siimple-layout-sidebar-zindex;
+  //Sidebar class
+  &-sidebar
+  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 
-  //Flex style
-  display: flex; flex-direction: column; flex-wrap: nowrap;
+    width: $siimple-layout-sidebar-width;
+    height: 100%;
+    z-index: $siimple-layout-sidebar-zindex;
 
-  //Position
-  position: fixed; top: 0px; left: 0px;
+    transform: translateX(- $siimple-layout-sidebar-width);
+    transition: transform 0.3s;
+  }
 
-  //Transform
-  transform: translateX(- $siimple-layout-sidebar-width);
+  //Sidebar menu class
+  &-sidebar &-menu
+  {
+    display: block;
 
-  //Transition
-  transition: transform 0.3s;
+    margin-top: $siimple-layout-sidebar-menu-margin-top;
+    margin-bottom: $siimple-layout-sidebar-menu-margin-bottom;
+  }
 
+  //Sidebar menu title
+  &-sidebar &-menu &-menu-title
+  {
+    display: block;
+
+    width: calc(100% - #{ $siimple-layout-sidebar-menu-title-padding });
+    height: $siimple-layout-sidebar-menu-title-height;
+    line-height: $siimple-layout-sidebar-menu-title-height;
+
+    padding-left: $siimple-layout-sidebar-menu-title-padding;
+    margin: 0px;
+
+    text-decoration: none;
+    text-align: left;
+    font-size: $siimple-layout-sidebar-menu-title-size;
+    font-weight: normal;
+    @include siimple-font;
+
+    opacity: $siimple-layout-sidebar-menu-title-opacity;
+  }
+
+  //Sidebar menu item
+  &-sidebar &-menu &-menu-item
+  {
+    display: block;
+
+    width: calc(100% - #{ $siimple-layout-sidebar-menu-item-padding });
+    height: $siimple-layout-sidebar-menu-item-height;
+    line-height: $siimple-layout-sidebar-menu-item-height;
+
+    padding-left: $siimple-layout-sidebar-menu-item-padding;
+    margin: 0px;
+
+    transition: all 0.3s;
+    cursor: pointer;
+    opacity: 1.0;
+  }
+
+  //Sidebar obfuscator
+  &-sidebar-obfuscator
+  {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: $siimple-layout-sidebar-obfuscator-zindex;
+    transition: all 0.3s;
+  }
+
+  //Colored sidebar
+  @each $color,$list in $siimple-palette
+  {
+    //Sidebar
+    &-sidebar--#{$color}
+    {
+      color: siimple-color-over($color);
+      background-color: siimple-color-base($color);
+    }
+
+    //Sidebar title
+    &-sidebar--#{$color} &-title
+    {
+      color: siimple-color-over($color);
+    }
+
+    //Sidebar title hover
+    &-sidebar--#{$color} &-title:hover
+    {
+      background-color: siimple-color-index($color, 3);
+    }
+
+    //Sidebar menu item
+    &-sidebar--#{$color} &-menu-item
+    {
+      color: siimple-color-over($color);
+    }
+
+    //Sidebar menu item hover
+    &-sidebar--#{$color} &-menu-item:hover
+    {
+      color: siimple-color-over($color);
+      background-color: siimple-color-index($color, 3);
+    }
+  }
+
+  /*
   //Sidebar menu icon
   &-button
   {
@@ -82,23 +205,5 @@
     //Hamburguer span after
     & span::after { content: ''; top: 10px; }
   }
-
-  //Sidebar obfuscator
-  &-obfuscator
-  {
-    //Default position
-    position: absolute; top: 0; left: 0;
-
-    //Size
-    height: 100%; width: 100%;
-
-    //z-index
-    z-index: $siimple-layout-sidebar-obfuscator-zindex;
-
-    //Visibility
-    visibility: hidden;
-
-    //Transition
-    transition: all 0.3s;
-  }
+  */
 }
