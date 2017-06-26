@@ -37,7 +37,7 @@ $siimple-layout-footer-padding-bottom: 80px;
   @each $color,$list in $siimple-palette
   {
     //Footer color
-    &-footer &-footer--#{$color}
+    &-footer--#{$color}
     {
       background-color: siimple-color-base($color);
       color: siimple-color-over($color);
