@@ -132,7 +132,7 @@ $siimple-layout-sidebar-obfuscator-zindex: 4;
     &-sidebar--#{$color}
     {
       color: siimple-color-over($color);
-      background-color: siimple-color-base($color);
+      background-color: siimple-color-index($color, 3);
     }
 
     //Sidebar title
@@ -144,7 +144,7 @@ $siimple-layout-sidebar-obfuscator-zindex: 4;
     //Sidebar title hover
     &-sidebar--#{$color} &-title:hover
     {
-      background-color: siimple-color-index($color, 3);
+      background-color: siimple-color-index($color, 1);
     }
 
     //Sidebar menu item
@@ -157,7 +157,7 @@ $siimple-layout-sidebar-obfuscator-zindex: 4;
     &-sidebar--#{$color} &-menu-item:hover
     {
       color: siimple-color-over($color);
-      background-color: siimple-color-index($color, 3);
+      background-color: siimple-color-index($color, 1);
     }
   }
 }
