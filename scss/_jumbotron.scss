@@ -6,82 +6,99 @@
 // Website:    https://siimple.juanes.xyz
 //
 
+//Jumbotron variables
+$siimple-layout-jumbotron-padding-top: 120px;
+$siimple-layout-jumbotron-padding-bottom: 120px;
+
 //Jumbotron
 @mixin siimple-layout-jumbotron
 {
-  //Display
-  display: block;
+  //Jumbotron element
+  &-jumbotron
+  {
+    display: block;
+    @include siimple-layout-large;
 
-  //Padding top
-  padding-top: $siimple-layout-jumbotron-padding-top;
+    padding-top: $siimple-layout-jumbotron-padding-top;
+    padding-bottom: $siimple-layout-jumbotron-padding-bottom;
+  }
 
-  //Padding bottom
-  padding-bottom: $siimple-layout-jumbotron-padding-bottom;
-
-  //Default is large style
-  @include siimple-layout-large;
-
-  //Small style
-  &--small { @include siimple-layout-small; }
+  //Small jumbotron
+  &-jumbotron &-jumbotron--small { @include siimple-layout-small; }
 
   //Large style
-  &--large { @include siimple-layout-large; }
+  &-jumbotron &-jumbotron--large { @include siimple-layout-large; }
 
   //Fluid style
-  &--fluid { @include siimple-layout-fluid; }
+  &-jumbotron &-jumbotron--fluid { @include siimple-layout-fluid; }
 
   //Jumbotron title text
-  &-title
+  &-jumbotron-title
   {
-    //Display
-    display: block; line-height: 60px;
+    display: block;
+    line-height: 60px;
 
-    //Font
-    @include siimple-font; font-weight: bold; font-size: 50px;
+    @include siimple-font;
+    font-weight: bold;
+    font-size: 50px;
+    text-decoration: none;
 
-    //Margin
-    margin: { top: 0px; bottom: 0px; }
+    margin: 0px;
   }
 
   //Jumbotron subtitle text
-  &-subtitle
+  &-jumbotron-subtitle
   {
-    //Display
-    display: block; line-height: 40px;
+    display: block;
+    line-height: 40px;
 
-    //Font
-    @include siimple-font; font-size: 30px;
+    @include siimple-font;
+    font-size: 30px;
+    text-decoration: none;
 
-    //Margin
-    margin: { top: 10px; bottom: 10px; }
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   //Jumbotron detail text
-  &-detail
+  &-jumbotron-detail
   {
-    //Display
-    display: block; line-height: 30px;
+    display: block;
+    line-height: 30px;
 
-    //Font
-    @include siimple-font; font-size: 20px;
+    @include siimple-font;
+    font-size: 20px;
+    text-decoration: none;
 
-    //Margin
-    margin: { top: 10px; bottom: 10px; }
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   //Jumbotron colors
   @each $color,$list in $siimple-palette
   {
     //Add the background color
-    &--#{$color} { background-color: siimple-color-base($color); }
+    &-jumbotron &-jumbotron--#{$color}
+    {
+      background-color: siimple-color-base($color);
+    }
 
-    //Add the title color
-    &--#{$color} &-title { color: siimple-color-over($color); }
+    //Jumbotron title
+    &-jumbotron &-jumbotron--#{$color} &-jumbotron-title
+    {
+      color: siimple-color-over($color);
+    }
 
-    //Add the subtitle color
-    &--#{$color} &-subtitle { color: siimple-color-over($color); }
+    //Jumbotron subtitle color
+    &-jumbotron &-jumbotron--#{$color} &-jumbotron-subtitle
+    {
+      color: siimple-color-over($color);
+    }
 
-    //Add the detail color
-    &--#{$color} &-detail { color: siimple-color-over($color); }
+    //Jumbotron detail color
+    &-jumbotron &-jumbotron--#{$color} &-jumbotron-detail
+    {
+      color: siimple-color-over($color);
+    }
   }
 }
