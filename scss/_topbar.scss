@@ -107,7 +107,7 @@ $siimple-layout-topbar-title-size: 22px;
     //Topbar menu item hover
     &-topbar--#{$color} &-menu-item:hover
     {
-      background-color: siimple-color-index($color, 3);
+      background-color: siimple-color-index($color, 1);
     }
 
     //Topbar title
@@ -119,7 +119,7 @@ $siimple-layout-topbar-title-size: 22px;
     //Topbar title hover
     &-topbar--#{$color} &-title:hover
     {
-      background-color: siimple-color-index($color, 3);
+      background-color: siimple-color-index($color, 1);
     }
   }
 }
