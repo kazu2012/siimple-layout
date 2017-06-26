@@ -12,17 +12,18 @@ $siimple-layout-sidebar-zindex: 5;
 
 //Sidebar menu variables
 $siimple-layout-sidebar-menu-margin-top: 5px;
-$siimple-layout-sidebar-menu-margin-bottom: 5px;
+$siimple-layout-sidebar-menu-margin-bottom: 10px;
 
 //Sidebar menu title variables
 $siimple-layout-sidebar-menu-title-height: 25px;
-$siimple-layout-sidebar-menu-title-size: 16px;
+$siimple-layout-sidebar-menu-title-size: 14px;
 $siimple-layout-sidebar-menu-title-padding: 10px;
 $siimple-layout-sidebar-menu-title-opacity: 0.6;
 
 //Sidebar menu item variables
 $siimple-layout-sidebar-menu-item-height: 40px;
 $siimple-layout-sidebar-menu-item-padding: 10px;
+$siimple-layout-sidebar-menu-item-size: 14px;
 
 //Sidebar obfuscator variables
 $siimple-layout-sidebar-obfuscator-zindex: 4;
@@ -87,12 +88,24 @@ $siimple-layout-sidebar-obfuscator-zindex: 4;
     height: $siimple-layout-sidebar-menu-item-height;
     line-height: $siimple-layout-sidebar-menu-item-height;
 
+    text-decoration: none;
+    text-align: left;
+    font-size: $siimple-layout-sidebar-menu-item-size;
+    font-weight: bold;
+    @include siimple-font;
+
     padding-left: $siimple-layout-sidebar-menu-item-padding;
     margin: 0px;
 
     transition: all 0.3s;
     cursor: pointer;
     opacity: 1.0;
+  }
+
+  //Sidebar title
+  &-sidebar &-title
+  {
+    display: block;
   }
 
   //Sidebar obfuscator
