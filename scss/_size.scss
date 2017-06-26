@@ -6,6 +6,16 @@
 // Website:    https://siimple.juanes.xyz
 //
 
+//Fluid variables
+$siimple-layout-fluid-width: 100%;
+$siimple-layout-fluid-offset: 20px;
+
+//Small variables
+$siimple-layout-small-width: 960px;
+
+//Large variables
+$siimple-layout-large-width: 1180px;
+
 //Fluid size mixin
 @mixin siimple-layout-fluid
 {
