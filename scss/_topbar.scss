@@ -17,6 +17,7 @@ $siimple-layout-topbar-menu-item-padding: 10px;
 
 //Topbar title variables
 $siimple-layout-topbar-title-size: 22px;
+$siimple-layout-topbar-title-padding: 10px;
 
 //Topbar mixin
 @mixin siimple-layout-topbar
@@ -82,6 +83,9 @@ $siimple-layout-topbar-title-size: 22px;
     font-weight: bold;
     font-size: $siimple-layout-topbar-title-size;
     @include siimple-font;
+
+    padding-left: $siimple-layout-topbar-title-padding;
+    padding-right: $siimple-layout-topbar-title-padding;
 
     transition: all 0.3s;
     opacity: 1.0;
