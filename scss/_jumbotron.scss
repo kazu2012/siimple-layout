@@ -33,7 +33,7 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
   &-jumbotron &-jumbotron--fluid { @include siimple-layout-fluid; }
 
   //Jumbotron title text
-  &-jumbotron-title
+  &-jumbotron &-title
   {
     display: block;
     line-height: 60px;
@@ -47,7 +47,7 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
   }
 
   //Jumbotron subtitle text
-  &-jumbotron-subtitle
+  &-jumbotron &-subtitle
   {
     display: block;
     line-height: 40px;
@@ -61,7 +61,7 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
   }
 
   //Jumbotron detail text
-  &-jumbotron-detail
+  &-jumbotron &-detail
   {
     display: block;
     line-height: 30px;
@@ -84,19 +84,19 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
     }
 
     //Jumbotron title
-    &-jumbotron &-jumbotron--#{$color} &-jumbotron-title
+    &-jumbotron &-jumbotron--#{$color} &-title
     {
       color: siimple-color-over($color);
     }
 
     //Jumbotron subtitle color
-    &-jumbotron &-jumbotron--#{$color} &-jumbotron-subtitle
+    &-jumbotron &-jumbotron--#{$color} &-subtitle
     {
       color: siimple-color-over($color);
     }
 
     //Jumbotron detail color
-    &-jumbotron &-jumbotron--#{$color} &-jumbotron-detail
+    &-jumbotron &-jumbotron--#{$color} &-detail
     {
       color: siimple-color-over($color);
     }
