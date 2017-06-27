@@ -36,9 +36,6 @@
   //Include jumbotron class
   @include siimple-layout-jumbotron;
 
-  //Include main content class
-  @include siimple-layout-main;
-
   //Include footer class
   @include siimple-layout-footer;
 
@@ -50,6 +47,15 @@
   
   //Include sidebar class
   @include siimple-layout-sidebar;
+
+  //Small style
+  &--small { @include siimple-layout-small; }
+
+  //Large style
+  &--large { @include siimple-layout-large; }
+
+  //Fluid style
+  &--fluid { @include siimple-layout-fluid; }
 
   //Has sidebar and is visible
   &--has-sidebar &-sidebar.is-visible
