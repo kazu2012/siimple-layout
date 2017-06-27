@@ -33,17 +33,15 @@ $siimple-layout-main-menu-subitem-padding-left: 30px;
     padding-top: $siimple-layout-main-padding-top;
     padding-bottom: $siimple-layout-main-padding-bottom;
 
-    @include siimple-layout-large;
+    //Small main
+    &--small { @include siimple-layout-small; }
+
+    //Large main
+    &--large { @include siimple-layout-large; }
+
+    //Fluid main
+    &--fluid { @include siimple-layout-fluid; }
   }
-
-  //Small main
-  &-main &-main--small { @include siimple-layout-small; }
-
-  //Large main
-  &-main &-main--large { @include siimple-layout-large; }
-
-  //Fluid main
-  &-main &-main--fluid { @include siimple-layout-fluid; }
 
   //Main menu
   &-main &-menu
