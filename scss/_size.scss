@@ -20,13 +20,13 @@ $siimple-layout-large-width: 1180px;
 @mixin siimple-layout-fluid
 {
   //Width
-  width: calc(100% - #{$siimple-layout-fluid-offset + $siimple-layout-fluid-offset}) !important;
+  width: calc(100% - #{$siimple-layout-fluid-offset + $siimple-layout-fluid-offset});
 
   //Padding left
-  padding-left: $siimple-layout-fluid-offset !important;
+  padding-left: $siimple-layout-fluid-offset;
 
   //Padding right
-  padding-right: $siimple-layout-fluid-offset !important;
+  padding-right: $siimple-layout-fluid-offset;
 }
 
 //Small size mixin
