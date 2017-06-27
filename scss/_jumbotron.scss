@@ -20,15 +20,6 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
 
     padding-top: $siimple-layout-jumbotron-padding-top;
     padding-bottom: $siimple-layout-jumbotron-padding-bottom;
-
-    //Small jumbotron
-    &--small { @include siimple-layout-small; }
-
-    //Large style
-    &--large { @include siimple-layout-large; }
-
-    //Fluid style
-    &--fluid { @include siimple-layout-fluid; }
   }
 
   //Jumbotron title text
