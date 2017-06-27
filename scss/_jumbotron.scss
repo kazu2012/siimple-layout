@@ -17,7 +17,6 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
   &-jumbotron
   {
     display: block;
-    @include siimple-layout-large;
 
     padding-top: $siimple-layout-jumbotron-padding-top;
     padding-bottom: $siimple-layout-jumbotron-padding-bottom;
