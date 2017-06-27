@@ -20,18 +20,7 @@ $siimple-layout-footer-padding-bottom: 80px;
 
     padding-top: $siimple-layout-footer-padding-top;
     padding-bottom: $siimple-layout-footer-padding-bottom;
-
-    @include siimple-layout-large;
   }
-
-  //Small footer
-  &-footer &-footer--small { @include siimple-layout-small; }
-
-  //Large footer
-  &-footer &-footer--large { @include siimple-layout-large; }
-
-  //Fluid footer
-  &-footer &-footer--fluid { @include siimple-layout-fluid; }
 
   //Footer colors
   @each $color,$list in $siimple-palette
