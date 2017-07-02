@@ -40,7 +40,7 @@
   &-footer { @include siimple-layout-footer; }
 
   //Include content class
-  @include siimple-layout-content();
+  &-content { @include siimple-layout-content; }
 
   //Include navbar class
   &-navbar { @include siimple-layout-navbar; }
