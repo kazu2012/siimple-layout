@@ -13,20 +13,16 @@ $siimple-layout-footer-padding-bottom: 80px;
 //Footer mixin
 @mixin siimple-layout-footer
 {
-  //Footer class
-  &-footer
-  {
-    display: block;
+  display: block;
 
-    padding-top: $siimple-layout-footer-padding-top;
-    padding-bottom: $siimple-layout-footer-padding-bottom;
-  }
+  padding-top: $siimple-layout-footer-padding-top;
+  padding-bottom: $siimple-layout-footer-padding-bottom;
 
   //Footer colors
   @each $color,$list in $siimple-palette
   {
     //Footer color
-    &-footer--#{$color}
+    &#{&}--#{$color}
     {
       background-color: siimple-color-base($color);
       color: siimple-color-over($color);
