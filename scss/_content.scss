@@ -25,14 +25,11 @@ $siimple-layout-content-menu-subitem-padding-left: 30px;
 //Content content mixin
 @mixin siimple-layout-content
 {
-  //Content class
-  &-content
-  {
-    display: block;
+  display: block;
 
-    padding-top: $siimple-layout-content-padding-top;
-    padding-bottom: $siimple-layout-content-padding-bottom;
-  }
+  padding-top: $siimple-layout-content-padding-top;
+  padding-bottom: $siimple-layout-content-padding-bottom;
+  /*
 
   //Content menu
   &-content &-menu
@@ -100,5 +97,6 @@ $siimple-layout-content-menu-subitem-padding-left: 30px;
     color: $siimple-navy-3;
     padding-left: $siimple-layout-content-menu-subitem-padding-left !important;
   }
+  */
 }
 
