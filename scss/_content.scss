@@ -10,18 +10,6 @@
 $siimple-layout-content-padding-top: 30px;
 $siimple-layout-content-padding-bottom: 30px;
 
-//Content menu variables
-$siimple-layout-content-menu-margin-top: 0px;
-$siimple-layout-content-menu-margin-bottom: 15px;
-$siimple-layout-content-menu-radius: 5px;
-
-//Content menu item variables
-$siimple-layout-content-menu-item-height: 40px;
-$siimple-layout-content-menu-item-padding-left: 15px;
-
-//Content menu subitem variables
-$siimple-layout-content-menu-subitem-padding-left: 30px;
-
 //Content content mixin
 @mixin siimple-layout-content
 {
@@ -29,74 +17,5 @@ $siimple-layout-content-menu-subitem-padding-left: 30px;
 
   padding-top: $siimple-layout-content-padding-top;
   padding-bottom: $siimple-layout-content-padding-bottom;
-  /*
-
-  //Content menu
-  &-content &-menu
-  {
-    display: block;
-    width: 100%;
-
-    border-radius: $siimple-layout-content-menu-radius;
-
-    background-color: $siimple-grey-2;
-
-    margin-top: $siimple-layout-content-menu-margin-top;
-    margin-bottom: $siimple-layout-content-menu-margin-bottom;
-  }
-
-  //Content menu item and subitem
-  &-content &-menu &-menu-item, &-content &-menu &-menu-subitem
-  {
-    display: block;
-
-    height: $siimple-layout-content-menu-item-height;
-    line-height: $siimple-layout-content-menu-item-height;
-
-    font-size: $siimple-font-normal;
-    font-weight: bold;
-    text-decoration: none;
-
-    border-radius: 0px;
-
-    transition: all 0.3s;
-    opacity: 1.0;
-
-    //Menu item hover
-    &:hover
-    {
-      cursor: pointer;
-      background-color: $siimple-grey-1;
-    }
-
-    //Menu item first item element
-    &:first-child
-    {
-      border-top-left-radius: $siimple-layout-content-menu-radius;
-      border-top-right-radius: $siimple-layout-content-menu-radius;
-    }
-
-    //Menu item last child element
-    &:last-child
-    {
-      border-bottom-left-radius: $siimple-layout-content-menu-radius;
-      border-bottom-right-radius: $siimple-layout-content-menu-radius;
-    }
-  }
-
-  //Content menu item
-  &-content &-menu-item
-  {
-    color: $siimple-navy;
-    padding-left: $siimple-layout-content-menu-item-padding-left !important;
-  }
-
-  //Content menu subitem
-  &-content &-menu-subitem
-  {
-    color: $siimple-navy-3;
-    padding-left: $siimple-layout-content-menu-subitem-padding-left !important;
-  }
-  */
 }
 
