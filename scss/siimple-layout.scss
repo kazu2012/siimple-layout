@@ -37,7 +37,7 @@
   &-jumbotron { @include siimple-layout-jumbotron; }
 
   //Include footer class
-  @include siimple-layout-footer();
+  &-footer { @include siimple-layout-footer; }
 
   //Include content class
   @include siimple-layout-content();
