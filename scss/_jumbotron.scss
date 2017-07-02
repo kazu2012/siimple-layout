@@ -13,53 +13,42 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
 //Jumbotron
 @mixin siimple-layout-jumbotron
 {
-  //Jumbotron element
-  &-jumbotron
+  display: block;
+
+  padding-top: $siimple-layout-jumbotron-padding-top;
+  padding-bottom: $siimple-layout-jumbotron-padding-bottom;
+
+  //Jumbotron title, subtitle and detail common texts
+  & &-title, & &-subtitle, & &-detail
   {
     display: block;
-
-    padding-top: $siimple-layout-jumbotron-padding-top;
-    padding-bottom: $siimple-layout-jumbotron-padding-bottom;
+    @include siimple-font;
+    text-decoration: none;
   }
 
   //Jumbotron title text
-  &-jumbotron &-title
+  & &-title
   {
-    display: block;
     line-height: 60px;
-
-    @include siimple-font;
     font-weight: bold;
     font-size: 50px;
-    text-decoration: none;
-
     margin: 0px;
   }
 
   //Jumbotron subtitle text
-  &-jumbotron &-subtitle
+  & &-subtitle
   {
-    display: block;
     line-height: 40px;
-
-    @include siimple-font;
     font-size: 30px;
-    text-decoration: none;
-
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
   //Jumbotron detail text
-  &-jumbotron &-detail
+  & &-detail
   {
-    display: block;
     line-height: 30px;
-
-    @include siimple-font;
     font-size: 20px;
-    text-decoration: none;
-
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -68,25 +57,25 @@ $siimple-layout-jumbotron-padding-bottom: 120px;
   @each $color,$list in $siimple-palette
   {
     //Add the background color
-    &-jumbotron--#{$color}
+    &#{&}--#{$color}
     {
       background-color: siimple-color-index($color, 3);
     }
 
     //Jumbotron title
-    &-jumbotron--#{$color} &-title
+    &#{&}--#{$color} &-title
     {
       color: siimple-color-over($color);
     }
 
     //Jumbotron subtitle color
-    &-jumbotron--#{$color} &-subtitle
+    &#{&}--#{$color} &-subtitle
     {
       color: siimple-color-over($color);
     }
 
     //Jumbotron detail color
-    &-jumbotron--#{$color} &-detail
+    &#{&}--#{$color} &-detail
     {
       color: siimple-color-over($color);
     }
