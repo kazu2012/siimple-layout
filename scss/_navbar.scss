@@ -9,7 +9,6 @@
 //Navbar default variables
 $siimple-layout-navbar-zindex: 3;
 $siimple-layout-navbar-height: 60px;
-$siimple-layout-navbar-padding: 0px;
 
 //Navbar item variables
 $siimple-layout-navbar-item-margin: 0px;
@@ -30,11 +29,11 @@ $siimple-layout-navbar-title-padding: 15px;
   //position: absolute; top: 0px; left: 0px;
   z-index: $siimple-layout-navbar-zindex;
 
-  width: calc(100% - #{ 2 * $siimple-layout-navbar-padding });
+  width: 100%;
   height: $siimple-layout-navbar-height;
 
   margin: 0px;
-  padding: { left: $siimple-layout-navbar-padding; right: $siimple-layout-navbar-padding; }
+  padding: 0px;
 
   //Navbar item, title and link common styles
   & &-item, & &-title, & &-link
