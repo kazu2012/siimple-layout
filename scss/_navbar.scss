@@ -98,32 +98,32 @@ $siimple-layout-navbar-title-padding: 15px;
   @each $color,$list in $siimple-palette
   {
     //Navbar background and text color
-    &.&--#{$color}
+    &#{&}--#{$color}
     {
       background-color: siimple-color-index($color, 2);
       color: siimple-color-over($color);
     }
 
     //Navbar link
-    &.&--#{$color} &-link
+    &#{&}--#{$color} &-link
     {
       color: siimple-color-over($color);
     }
 
     //Navbar link hover
-    &.&--#{$color} &-link:hover
+    &#{&}--#{$color} &-link:hover
     {
       background-color: siimple-color-index($color, 1);
     }
 
     //Navbar title
-    &.&--#{$color} &-title
+    &#{&}--#{$color} &-title
     {
       color: siimple-color-over($color);
     }
 
     //Navbar title hover
-    &.&--#{$color} &-title:hover
+    &#{&}--#{$color} &-title:hover
     {
       background-color: siimple-color-index($color, 1);
     }
