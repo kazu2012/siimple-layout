@@ -44,9 +44,6 @@
 
   //Include navbar class
   &-navbar { @include siimple-layout-navbar; }
-  
-  //Include sidebar class
-  @include siimple-layout-sidebar();
 
   //Small style
   &--small { @include siimple-layout-small(); }
