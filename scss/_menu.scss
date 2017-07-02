@@ -1,0 +1,30 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Menu variables
+$siimple-layout-menu-margin-top: 0px;
+$siimple-layout-menu-margin-bottom: 10px;
+
+//Menu item variables
+$siimple-layout-menu-item-height: 40px;
+$siimple-layout-menu-item-padding-left: 15px;
+
+//Menu subitem variables
+$siimple-layout-menu-subitem-padding-left: 30px;
+
+//Menu mixin
+@mixin siimple-layout-menu
+{
+  display: block;
+
+  width: 100%;
+
+  margin-top: $siimple-layout-menu-margin-top;
+  margin-bottom: $siimple-layout-menu-margin-bottom;
+  padding: 0px;
+}
