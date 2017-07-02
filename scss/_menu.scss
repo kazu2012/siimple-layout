@@ -10,12 +10,17 @@
 $siimple-layout-menu-margin-top: 0px;
 $siimple-layout-menu-margin-bottom: 10px;
 
+//Menu group variables
+$siimple-layout-menu-group-height: 25px;
+$siimple-layout-menu-group-margin: 10px;
+
 //Menu item variables
-$siimple-layout-menu-item-height: 40px;
-$siimple-layout-menu-item-padding-left: 15px;
+$siimple-layout-menu-item-height: 34px;
+$siimple-layout-menu-item-radius: 5px;
+$siimple-layout-menu-item-padding: 10px;
 
 //Menu subitem variables
-$siimple-layout-menu-subitem-padding-left: 30px;
+$siimple-layout-menu-subitem-padding: 10px;
 
 //Menu mixin
 @mixin siimple-layout-menu
@@ -27,4 +32,58 @@ $siimple-layout-menu-subitem-padding-left: 30px;
   margin-top: $siimple-layout-menu-margin-top;
   margin-bottom: $siimple-layout-menu-margin-bottom;
   padding: 0px;
+
+  //Menu group
+  & &-group
+  {
+    display: block;
+    width: 100%;
+    height: $siimple-layout-menu-group-height;
+    line-height: $siimple-layout-menu-group-height;
+
+    @include siimple-font;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    color: $siimple-navy-3;
+  }
+
+  //Menu item and subitem common styles
+  & &-item, & &-subitem
+  {
+    display: block;
+    height: $siimple-layout-menu-item-height;
+    line-height: $siimple-layout-menu-item-height;
+
+    border: 0px;
+    border-radius: $siimple-layout-menu-item-radius;
+
+    @include siimple-font;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    opacity: 1.0;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    //Hover styles
+    &:hover
+    {
+      background-color: $siimple-grey-2;
+    }
+  }
+
+  //Menu item
+  & &-item
+  {
+    padding-left: $siimple-layout-menu-item-padding;
+    padding-right: $siimple-layout-menu-item-padding;
+  }
+
+  //Menu subitem
+  & &-subitem
+  {
+    padding-left: $siimple-layout-menu-subitem-padding;
+  }
 }
