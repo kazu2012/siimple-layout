@@ -42,6 +42,9 @@
   //Include content class
   &-content { @include siimple-layout-content; }
 
+  //Include the menu class
+  &-menu { @include siimple-layout-menu; }
+
   //Include navbar class
   &-navbar { @include siimple-layout-navbar; }
 
