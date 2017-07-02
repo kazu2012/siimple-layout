@@ -11,9 +11,13 @@ $siimple-layout-navbar-zindex: 3;
 $siimple-layout-navbar-height: 60px;
 $siimple-layout-navbar-padding: 0px;
 
-//Navbar menu item variables
-$siimple-layout-navbar-menu-item-margin: 0px;
-$siimple-layout-navbar-menu-item-padding: 15px;
+//Navbar item variables
+$siimple-layout-navbar-item-margin: 0px;
+$siimple-layout-navbar-item-padding: 15px;
+
+//Navbar link variables
+$siimple-layout-navbar-link-margin: 0px;
+$siimple-layout-navbar-link-padding: 15px;
 
 //Navbar title variables
 $siimple-layout-navbar-title-size: 22px;
@@ -22,63 +26,45 @@ $siimple-layout-navbar-title-padding: 15px;
 //Navbar mixin
 @mixin siimple-layout-navbar
 {
-  //Navbar class
-  &-navbar
-  {
-    display: block;
-    //position: absolute; top: 0px; left: 0px;
-    z-index: $siimple-layout-navbar-zindex;
+  display: block;
+  //position: absolute; top: 0px; left: 0px;
+  z-index: $siimple-layout-navbar-zindex;
 
-    width: calc(100% - #{ 2 * $siimple-layout-navbar-padding });
-    height: $siimple-layout-navbar-height;
+  width: calc(100% - #{ 2 * $siimple-layout-navbar-padding });
+  height: $siimple-layout-navbar-height;
 
-    margin: 0px;
-    padding: { left: $siimple-layout-navbar-padding; right: $siimple-layout-navbar-padding; }
-  }
+  margin: 0px;
+  padding: { left: $siimple-layout-navbar-padding; right: $siimple-layout-navbar-padding; }
 
-  //Navbar menu
-  &-navbar &-menu
+  //Navbar item, title and link common styles
+  & &-item, & &-title, & &-link
   {
     display: inline-block;
-    float: right;
-
-    height: $siimple-layout-navbar-height;
-  }
-
-  //Navbar menu item
-  &-navbar &-menu &-menu-item
-  {
-    display: inline-block;
-    float: left;
 
     height: $siimple-layout-navbar-height;
     line-height: $siimple-layout-navbar-height;
 
-    margin-left: $siimple-layout-navbar-menu-item-margin;
-    margin-right: $siimple-layout-navbar-menu-item-margin;
-    padding-left: $siimple-layout-navbar-menu-item-padding;
-    padding-right: $siimple-layout-navbar-menu-item-padding;
+    @include siimple-font;
+  }
+
+  //Navbar item
+  & &-item
+  {
+    margin-left: $siimple-layout-navbar-item-margin;
+    margin-right: $siimple-layout-navbar-item-margin;
+
+    padding-left: $siimple-layout-navbar-item-padding;
+    padding-right: $siimple-layout-navbar-item-padding;
 
     text-decoration: none;
     text-align: center;
     font-weight: bold;
     font-size: $siimple-font-normal;
-    @include siimple-font;
-
-    transition: all 0.3s;
-    opacity: 1.0;
-    cursor: pointer;
   }
 
   //Navbar title
-  &-navbar &-title
+  & &-title
   {
-    display: inline-block;
-    float: left;
-
-    height: $siimple-layout-navbar-height;
-    line-height: $siimple-layout-navbar-height;
-
     text-decoration: none;
     font-weight: bold;
     font-size: $siimple-layout-navbar-title-size;
@@ -88,7 +74,24 @@ $siimple-layout-navbar-title-padding: 15px;
     padding-right: $siimple-layout-navbar-title-padding;
 
     transition: all 0.3s;
-    opacity: 1.0;
+    cursor: pointer;
+  }
+
+  //Navbar link
+  & &-link
+  {
+    margin-left: $siimple-layout-navbar-link-margin;
+    margin-right: $siimple-layout-navbar-link-margin;
+
+    padding-left: $siimple-layout-navbar-link-padding;
+    padding-right: $siimple-layout-navbar-link-padding;
+
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: $siimple-font-normal;
+
+    transition: all 0.3s;
     cursor: pointer;
   }
 
@@ -96,32 +99,32 @@ $siimple-layout-navbar-title-padding: 15px;
   @each $color,$list in $siimple-palette
   {
     //Navbar background and text color
-    &-navbar--#{$color}
+    &.&--#{$color}
     {
       background-color: siimple-color-index($color, 2);
       color: siimple-color-over($color);
     }
 
-    //Navbar menu item
-    &-navbar--#{$color} &-menu-item
+    //Navbar link
+    &.&--#{$color} &-link
     {
       color: siimple-color-over($color);
     }
 
-    //Navbar menu item hover
-    &-navbar--#{$color} &-menu-item:hover
+    //Navbar link hover
+    &.&--#{$color} &-link:hover
     {
       background-color: siimple-color-index($color, 1);
     }
 
     //Navbar title
-    &-navbar--#{$color} &-title
+    &.&--#{$color} &-title
     {
       color: siimple-color-over($color);
     }
 
     //Navbar title hover
-    &-navbar--#{$color} &-title:hover
+    &.&--#{$color} &-title:hover
     {
       background-color: siimple-color-index($color, 1);
     }
