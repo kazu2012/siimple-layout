@@ -34,7 +34,7 @@
   //background-color: $siimple-white;
 
   //Include jumbotron class
-  @include siimple-layout-jumbotron();
+  &-jumbotron { @include siimple-layout-jumbotron; }
 
   //Include footer class
   @include siimple-layout-footer();
