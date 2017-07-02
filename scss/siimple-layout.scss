@@ -43,7 +43,7 @@
   @include siimple-layout-content();
 
   //Include navbar class
-  @include siimple-layout-navbar();
+  &-navbar { @include siimple-layout-navbar; }
   
   //Include sidebar class
   @include siimple-layout-sidebar();
@@ -56,4 +56,10 @@
 
   //Fluid style
   &--fluid { @include siimple-layout-fluid(); }
+
+  //Left align
+  &--left { float: left; }
+
+  //Right align
+  &--right { float: right; }
 }
