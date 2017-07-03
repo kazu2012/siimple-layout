@@ -28,7 +28,7 @@ $siimple-layout-tabs-tab-margin-bottom: -2px;
   height: $siimple-layout-tabs-height;
   line-height: $siimple-layout-tabs-height;
 
-  border-bottom: 1px solid $siimple-grey-3;
+  border-bottom: 2px solid $siimple-grey-2;
 
   margin-bottom: $siimple-layout-tabs-margin-bottom;
   margin-top: $siimple-layout-tabs-margin-top;
@@ -55,7 +55,7 @@ $siimple-layout-tabs-tab-margin-bottom: -2px;
 
     padding-left: $siimple-layout-tabs-tab-padding-left;
     padding-right: $siimple-layout-tabs-tab-padding-right;
-    margin-bottom: $siimple-layout-tabs-margin-bottom;
+    margin-bottom: $siimple-layout-tabs-tab-margin-bottom;
 
     border-bottom: 2px solid transparent;
     border-top-left-radius: $siimple-layout-tabs-tab-radius;
