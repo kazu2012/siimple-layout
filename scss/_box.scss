@@ -81,6 +81,10 @@ $siimple-layout-box-detail-margin-bottom: 10px;
   @each $color,$list in $siimple-palette
   {
     //Add the background color
-
+    &#{&}--#{$color}
+    {
+      background-color: siimple-color-index($color, 2);
+      color: siimple-color-over($color);
+    }
   }
 }
