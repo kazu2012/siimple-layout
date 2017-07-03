@@ -51,5 +51,67 @@ $siimple-layout-breadcrumb-crumb-padding-right: 10px;
     padding-right: $siimple-layout-breadcrumb-crumb-padding-right;
 
     transition: all 0.3s;
+
+    //Crumb hover
+    &:hover
+    {
+      color: $siimple-navy;
+      cursor: pointer;
+    }
+
+    //Crumb after
+    &:after
+    {
+      content: "";
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent;
+      border-left: 17px solid $siimple-grey-2;
+      position: absolute;
+      right: -17px;
+      top: 0;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+
+    //Crumb before
+    &:before
+    {
+      content: "";
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent;
+      border-left: 17px solid $siimple-white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+    }
+
+    //First crumb
+    &:first-of-type
+    {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding-left: 10px;
+    }
+
+    //First of type before
+    &:first-of-type:before
+    {
+      display: none;
+    }
+
+    //Last crumb
+    &:last-of-type
+    {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding-right: 10px;
+    }
+
+    //Last of type after
+    &:last-of-type:after
+    {
+      display: none;
+    }
   }
 }
