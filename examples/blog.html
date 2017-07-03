@@ -12,12 +12,15 @@
 <!-- Main layout -->
 <div class="siimple-layout">
   <!-- Navbar -->
-  <div class="siimple-layout-navbar siimple-layout-navbar--blue">
-    <a class="siimple-layout-title">Blog example</a>
-    <!-- Menu -->
-    <div class="siimple-layout-menu">
-      <a class="siimple-layout-menu-item">Link 1</a>
-      <a class="siimple-layout-menu-item">Link 2</a>
+  <div class="siimple-layout-navbar siimple-layout-navbar--navy siimple-layout--large">
+    <!-- Left menu -->
+    <div class="siimple-layout--left">
+      <a class="siimple-layout-navbar-title">Blog example</a>
+    </div>
+    <!-- Right menu -->
+    <div class="siimple-layout--right">
+      <a class="siimple-layout-navbar-link">Link 1</a>
+      <a class="siimple-layout-navbar-link">Link 2</a>
     </div>
   </div>
   <!-- Content -->
@@ -27,13 +30,21 @@
       <div class="siimple-grid-col siimple-grid-col--3">
         <!-- Menu element -->
         <div class="siimple-layout-menu">
+          <div class="siimple-layout-menu-group">GROUP 1</div>
           <a class="siimple-layout-menu-item">Link 1</a>
           <a class="siimple-layout-menu-item">Link 2</a>
-          <a class="siimple-layout-menu-subitem">Link 3</a>
-          <a class="siimple-layout-menu-subitem">Link 4</a>
+          <div class="siimple-layout-menu-sub">
+            <a class="siimple-layout-menu-item">Link 3</a>
+            <a class="siimple-layout-menu-item">Link 4</a>
+            <div class="siimple-layout-menu-sub">
+              <a class="siimple-layout-menu-item">Link 3</a>
+              <a class="siimple-layout-menu-item">Link 4</a>
+            </div>
+          </div>
         </div>
         <!-- Menu element -->
         <div class="siimple-layout-menu">
+          <div class="siimple-layout-menu-group">GROUP 2</div>
           <a class="siimple-layout-menu-item">Link 1</a>
           <a class="siimple-layout-menu-item">Link 2</a>
           <a class="siimple-layout-menu-item">Link 3</a>
