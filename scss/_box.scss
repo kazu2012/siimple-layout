@@ -56,6 +56,12 @@ $siimple-layout-box-detail-margin-bottom: 10px;
     margin-bottom: $siimple-layout-box-title-margin-bottom;
   }
 
+  //Title last element
+  & &-title:last-child
+  {
+    margin-bottom: $siimple-layout-box-title-margin-top;
+  }
+
   //Subtitle
   & &-subtitle
   {
@@ -69,12 +75,36 @@ $siimple-layout-box-detail-margin-bottom: 10px;
     margin-bottom: $siimple-layout-box-subtitle-margin-bottom;
   }
 
+  //Subtitle first element
+  & &-subtitle:first-child
+  {
+    margin-top: $siimple-layout-box-title-margin-top;
+  }
+
+  //Subtitle last element
+  & &-subtitle:last-child
+  {
+    margin-bottom: $siimple-layout-box-title-margin-top;
+  }
+
   //Detail
   & &-detail
   {
     display: block;
 
     margin-bottom: $siimple-layout-box-detail-margin-bottom;
+  }
+
+  //Detail first child
+  & &-detail:first-child
+  {
+    margin-top: $siimple-layout-box-title-margin-top;
+  }
+
+  //Detail last child
+  & &-detail:last-child
+  {
+    margin-bottom: $siimple-layout-box-title-margin-top;
   }
 
   //Theme box
