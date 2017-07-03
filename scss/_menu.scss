@@ -19,8 +19,11 @@ $siimple-layout-menu-item-height: 34px;
 $siimple-layout-menu-item-radius: 5px;
 $siimple-layout-menu-item-padding: 10px;
 
-//Menu subitem variables
-$siimple-layout-menu-subitem-padding: 10px;
+//Menu submenu variables
+$siimple-layout-menu-sub-margin-top: 5px;
+$siimple-layout-menu-sub-margin-bottom: 5px;
+$siimple-layout-menu-sub-margin-left: 10px;
+$siimple-layout-menu-sub-padding: 10px;
 
 //Menu mixin
 @mixin siimple-layout-menu
@@ -48,8 +51,8 @@ $siimple-layout-menu-subitem-padding: 10px;
     color: $siimple-navy-3;
   }
 
-  //Menu item and subitem common styles
-  & &-item, & &-subitem
+  //Menu item
+  & &-item
   {
     display: block;
     height: $siimple-layout-menu-item-height;
@@ -63,6 +66,9 @@ $siimple-layout-menu-subitem-padding: 10px;
     font-weight: bold;
     text-decoration: none;
 
+    padding-left: $siimple-layout-menu-item-padding;
+    padding-right: $siimple-layout-menu-item-padding;
+
     opacity: 1.0;
     transition: all 0.3s;
     cursor: pointer;
@@ -74,16 +80,16 @@ $siimple-layout-menu-subitem-padding: 10px;
     }
   }
 
-  //Menu item
-  & &-item
+  //Menu submenu
+  & &-sub
   {
-    padding-left: $siimple-layout-menu-item-padding;
-    padding-right: $siimple-layout-menu-item-padding;
-  }
+    display: block;
 
-  //Menu subitem
-  & &-subitem
-  {
-    padding-left: $siimple-layout-menu-subitem-padding;
+    padding-left: $siimple-layout-menu-sub-padding;
+    margin-left: $siimple-layout-menu-sub-margin-left;
+    margin-top: $siimple-layout-menu-sub-margin-top;
+    margin-bottom: $siimple-layout-menu-sub-margin-bottom;
+
+    border-left: 1px solid $siimple-grey-1;
   }
 }
