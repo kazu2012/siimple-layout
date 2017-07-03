@@ -8,6 +8,8 @@
 
 //Breadcrumb variables
 $siimple-layout-breadcrumb-height: 34px;
+$siimple-layout-breadcrumb-margin-bottom: 10px;
+$siimple-layout-breadcrumb-margin-top: 0px;
 
 //Breadcrumb crumb variables
 $siimple-layout-breadcrumb-crumb-margin-right: 5px;
@@ -21,6 +23,9 @@ $siimple-layout-breadcrumb-crumb-padding-right: 10px;
 
   width: 100%;
   height: $siimple-layout-breadcrumb-height;
+
+  margin-bottom: $siimple-layout-breadcrumb-margin-bottom;
+  margin-top: $siimple-layout-breadcrumb-margin-top;
 
   //Crumb class
   & &-crumb
