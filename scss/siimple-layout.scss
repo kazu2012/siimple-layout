@@ -33,6 +33,9 @@
 
   //background-color: $siimple-white;
 
+  //Include breadcrumb class
+  &-breadcrumb { @include siimple-layout-breadcrumb; }
+
   //Include jumbotron class
   &-jumbotron { @include siimple-layout-jumbotron; }
 
