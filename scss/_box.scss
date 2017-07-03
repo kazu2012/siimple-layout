@@ -7,7 +7,7 @@
 //
 
 //Box variables
-$siimple-layout-box-padding: 5px;
+$siimple-layout-box-padding: 10px;
 $siimple-layout-box-radius: 5px;
 $siimple-layout-box-margin-bottom: 10px;
 
@@ -60,7 +60,7 @@ $siimple-layout-box-detail-margin-bottom: 10px;
   & &-subtitle
   {
     display: block;
-    
+
     font-weight: bold;
     font-size: $siimple-layout-box-subtitle-font-size;
     text-decoration: none;
@@ -75,5 +75,12 @@ $siimple-layout-box-detail-margin-bottom: 10px;
     display: block;
 
     margin-bottom: $siimple-layout-box-detail-margin-bottom;
+  }
+
+  //Theme box
+  @each $color,$list in $siimple-palette
+  {
+    //Add the background color
+
   }
 }
