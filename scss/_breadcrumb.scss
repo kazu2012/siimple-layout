@@ -16,6 +16,14 @@ $siimple-layout-breadcrumb-crumb-margin-right: 5px;
 $siimple-layout-breadcrumb-crumb-padding-left: 25px;
 $siimple-layout-breadcrumb-crumb-padding-right: 10px;
 
+//Breadcrumb crumb first variables
+$siimple-layout-breadcrumb-crumb-first-radius: 5px;
+$siimple-layout-breadcrumb-crumb-first-padding: 10px;
+
+//Breadcrumb crumb last variables
+$siimple-layout-breadcrumb-crumb-last-radius: 5px;
+$siimple-layout-breadcrumb-crumb-last-padding: 10px;
+
 //Breadcrumb mixin
 @mixin siimple-layout-breadcrumb
 {
@@ -63,35 +71,37 @@ $siimple-layout-breadcrumb-crumb-padding-right: 10px;
     &:after
     {
       content: "";
-      border-top: 17px solid transparent;
-      border-bottom: 17px solid transparent;
-      border-left: 17px solid $siimple-grey-2;
-      position: absolute;
-      right: -17px;
-      top: 0;
       z-index: 1;
-      transition: all 0.3s;
+      position: absolute;
+      right: - #{$siimple-layout-breadcrumb-height / 2};
+      top: 0;
+
+      border-top: #{$siimple-layout-breadcrumb-height / 2} solid transparent;
+      border-bottom: #{$siimple-layout-breadcrumb-height / 2} solid transparent;
+      border-left: #{$siimple-layout-breadcrumb-height / 2} solid $siimple-grey-2;
     }
 
     //Crumb before
     &:before
     {
       content: "";
-      border-top: 17px solid transparent;
-      border-bottom: 17px solid transparent;
-      border-left: 17px solid $siimple-white;
+      z-index: 0;
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 0;
+
+      border-top: #{$siimple-layout-breadcrumb-height / 2} solid transparent;
+      border-bottom: #{$siimple-layout-breadcrumb-height / 2} solid transparent;
+      border-left: #{$siimple-layout-breadcrumb-height / 2} solid $siimple-white;
     }
 
     //First crumb
     &:first-of-type
     {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      padding-left: 10px;
+      border-top-left-radius: $siimple-layout-breadcrumb-crumb-first-radius;
+      border-bottom-left-radius: $siimple-layout-breadcrumb-crumb-first-radius;
+
+      padding-left: $siimple-layout-breadcrumb-crumb-first-padding;
     }
 
     //First of type before
@@ -103,9 +113,10 @@ $siimple-layout-breadcrumb-crumb-padding-right: 10px;
     //Last crumb
     &:last-of-type
     {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      padding-right: 10px;
+      border-top-right-radius: $siimple-layout-breadcrumb-crumb-last-radius;
+      border-bottom-right-radius: $siimple-layout-breadcrumb-crumb-last-radius;
+
+      padding-right: $siimple-layout-breadcrumb-crumb-last-padding;
     }
 
     //Last of type after
