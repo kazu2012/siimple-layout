@@ -1,0 +1,50 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Breadcrumb variables
+$siimple-layout-breadcrumb-height: 34px;
+
+//Breadcrumb crumb variables
+$siimple-layout-breadcrumb-crumb-margin-right: 5px;
+$siimple-layout-breadcrumb-crumb-padding-left: 25px;
+$siimple-layout-breadcrumb-crumb-padding-right: 10px;
+
+//Breadcrumb mixin
+@mixin siimple-layout-breadcrumb
+{
+  display: block;
+
+  width: 100%;
+  height: $siimple-layout-breadcrumb-height;
+
+  //Crumb class
+  & &-crumb
+  {
+    display: inline-block;
+    float: left;
+    position: relative;
+
+    height: $siimple-layout-breadcrumb-height;
+    line-height: $siimple-layout-breadcrumb-height;
+
+    background-color: $siimple-grey-2;
+
+    text-align: center;
+    @include siimple-font;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $siimple-navy-4;
+
+    margin-right: $siimple-layout-breadcrumb-crumb-margin-right;
+    padding-left: $siimple-layout-breadcrumb-crumb-padding-left;
+    padding-right: $siimple-layout-breadcrumb-crumb-padding-right;
+
+    transition: all 0.3s;
+  }
+}
