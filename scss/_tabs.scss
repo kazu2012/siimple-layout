@@ -6,8 +6,67 @@
 // Website:    https://siimple.juanes.xyz
 //
 
+//Tabs variables
+$siimple-layout-tabs-height: 40px;
+$siimple-layout-tabs-margin-bottom: 10px;
+$siimple-layout-tabs-margin-top: 0px;
+
+//Tabs tab variables
+$siimple-layout-tabs-tab-radius: 5px;
+$siimple-layout-tabs-tab-padding-left: 15px;
+$siimple-layout-tabs-tab-padding-right: 15px;
+$siimple-layout-tabs-tab-margin-bottom: -2px;
+
 //Tabs mixin
 @mixin siimple-layout-tabs
 {
+  display: block;
+  position: relative;
+  z-index: 8;
 
+  width: 100%;
+  height: $siimple-layout-tabs-height;
+  line-height: $siimple-layout-tabs-height;
+
+  border-bottom: 1px solid $siimple-grey-3;
+
+  margin-bottom: $siimple-layout-tabs-margin-bottom;
+  margin-top: $siimple-layout-tabs-margin-top;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  //Tab element
+  & &-tab
+  {
+    display: inline-block;
+    float: left;
+    z-index: 10;
+
+    height: #{$siimple-layout-tabs-height - 1px };
+    line-height: $siimple-layout-tabs-height;
+
+    @include siimple-font;
+    font-size: 14px;
+    font-weight: bold;
+
+    padding-left: $siimple-layout-tabs-tab-padding-left;
+    padding-right: $siimple-layout-tabs-tab-padding-right;
+    margin-bottom: $siimple-layout-tabs-margin-bottom;
+
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: $siimple-layout-tabs-tab-radius;
+    border-top-right-radius: $siimple-layout-tabs-tab-radius;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    //Tab hover
+    &:hover
+    {
+      border-bottom: 2px solid $siimple-navy-4;
+    }
+  }
 }
