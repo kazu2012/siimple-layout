@@ -78,6 +78,12 @@ $siimple-layout-tabs-tab-margin-bottom: -2px;
     }
   }
 
+  //Tab with a box
+  &#{&}--boxed &-tab:hover
+  {
+    background-color: $siimple-grey-2;
+  }
+
   //Colored tabs
   @each $color, $list in $siimple-palette
   {
