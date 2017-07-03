@@ -1,0 +1,79 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Box variables
+$siimple-layout-box-padding: 5px;
+$siimple-layout-box-radius: 5px;
+$siimple-layout-box-margin-bottom: 10px;
+
+//Box title variables
+$siimple-layout-box-title-font-size: 40px;
+$siimple-layout-box-title-margin-top: 20px;
+$siimple-layout-box-title-margin-bottom: 10px;
+
+//Box subtitle variables
+$siimple-layout-box-subtitle-font-size: 30px;
+$siimple-layout-box-subtitle-margin-top: 10px;
+$siimple-layout-box-subtitle-margin-bottom: 10px;
+
+//Box detail variables
+$siimple-layout-box-detail-margin-bottom: 10px;
+
+//Box mixin
+@mixin siimple-layout-box
+{
+  display: block;
+  vertical-align: top;
+
+  width: calc(100% - #{2 * $siimple-layout-box-padding});
+
+  background-color: $siimple-grey;
+
+  @include siimple-font;
+  font-size: 14px;
+  color: $siimple-navy;
+
+  border-radius: $siimple-layout-box-radius;
+
+  padding: $siimple-layout-box-padding;
+  margin-bottom: $siimple-layout-box-margin-bottom;
+
+  //Title
+  & &-title
+  {
+    display: block;
+
+    font-weight: bold;
+    font-size: $siimple-layout-box-title-font-size;
+    text-decoration: none;
+
+    margin-top: $siimple-layout-box-title-margin-top;
+    margin-bottom: $siimple-layout-box-title-margin-bottom;
+  }
+
+  //Subtitle
+  & &-subtitle
+  {
+    display: block;
+    
+    font-weight: bold;
+    font-size: $siimple-layout-box-subtitle-font-size;
+    text-decoration: none;
+
+    margin-top: $siimple-layout-box-subtitle-margin-top;
+    margin-bottom: $siimple-layout-box-subtitle-margin-bottom;
+  }
+
+  //Detail
+  & &-detail
+  {
+    display: block;
+
+    margin-bottom: $siimple-layout-box-detail-margin-bottom;
+  }
+}
