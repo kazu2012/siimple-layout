@@ -51,6 +51,7 @@ $siimple-layout-tabs-tab-margin-bottom: -2px;
     @include siimple-font;
     font-size: 14px;
     font-weight: bold;
+    color: $siimple-navy-3;
 
     padding-left: $siimple-layout-tabs-tab-padding-left;
     padding-right: $siimple-layout-tabs-tab-padding-right;
@@ -67,6 +68,30 @@ $siimple-layout-tabs-tab-margin-bottom: -2px;
     &:hover
     {
       border-bottom: 2px solid $siimple-navy-4;
+    }
+
+    //Selected tab
+    &--selected
+    {
+      color: $siimple-navy-2;
+      border-bottom: 2px solid $siimple-navy-2;
+    }
+  }
+
+  //Colored tabs
+  @each $color, $list in $siimple-palette
+  {
+    //Hover tab
+    &#{&}--#{$color} &-tab:hover
+    {
+      border-bottom-color: siimple-color-index($color, 4);
+    }
+
+    //Selected tab
+    &#{&}--#{$color} &-tab--selected
+    {
+      color: siimple-color-index($color, 2) !important;
+      border-bottom-color: siimple-color-index($color, 2) !important;
     }
   }
 }
