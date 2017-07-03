@@ -54,6 +54,10 @@
   //Include navbar class
   &-navbar { @include siimple-layout-navbar; }
 
+  //Include tabs class
+  &-tabs { @include siimple-layout-tabs; }
+  
+
   //Small style
   &--small { @include siimple-layout-small(); }
 
