@@ -33,6 +33,9 @@
 
   //background-color: $siimple-white;
 
+  //Include box class
+  &-box { @include siimple-layout-box; }
+
   //Include breadcrumb class
   &-breadcrumb { @include siimple-layout-breadcrumb; }
 
