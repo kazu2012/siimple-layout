@@ -62,6 +62,7 @@ $siimple-layout-menu-sub-padding: 10px;
     border-radius: $siimple-layout-menu-item-radius;
 
     @include siimple-font;
+    color: $siimple-navy;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
