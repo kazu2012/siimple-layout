@@ -1,0 +1,82 @@
+//
+// siimple-layout: the layout module for siimple
+// Under the MIT LICENSE.
+// License:    https://github.com/siimple/siimple-layout/blob/master/LICENSE.md
+// Repository: https://github.com/siimple-layout
+// Website:    https://siimple.juanes.xyz
+//
+
+//Form mixin
+@mixin siimple-layout-form
+{
+  display: block;
+  width: 100%;
+
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+  //Form group
+  &-group
+  {
+    display: block;
+    vertical-align: top;
+
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+
+  //Form rule
+  &-rule
+  {
+    display: block;
+    width: 100%;
+    height: 0px;
+
+    border-bottom: 1px solid $siimple-grey-1;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  //Form title, detail and helper common styles
+  &-title, &-detail, &-helper
+  {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+
+    @include siimple-font;
+  }
+
+  //Form title
+  &-title
+  {
+    font-weight: bold;
+    font-size: 14px;
+    color: $siimple-navy;
+
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  //Form detail text
+  &-detail
+  {
+    font-size: 14px;
+    color: $siimple-navy;
+
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  //Form helper
+  &-helper
+  {
+    font-weight: normal;
+    font-size: 12px;
+    color: siimple-navy-4;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
