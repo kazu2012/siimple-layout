@@ -57,6 +57,9 @@
   //Include tabs class
   &-tabs { @include siimple-layout-tabs; }
 
+  //Include form class
+  &-form { @include siimple-layout-form; } 
+
   //Small style
   &--small { @include siimple-layout-small(); }
 
